@@ -2,8 +2,15 @@
 <HTML> 
 <HEAD>
 <TITLE> HOMEGROWN </TITLE>
+  
+  <script src='https://ig.instant-tokens.com/users/a1ae215d-286e-4361-9877-e25d61be19f5/instagram/17841400358323044/token.js'></script>
+  <script src="instafeed.min.js"></script>
+  
 </HEAD>
 <BODY>
+<!-- The target container for the images -->
+<div id="instafeed"></div>
+ 
 
 <H1> 
 WELCOME TO I HEART HOMEGROWN!
@@ -13,6 +20,62 @@ WELCOME TO I HEART HOMEGROWN!
 BY JENNIFER KNAUS 
 </P>
 
+  
+  
+  
+<script type="text/javascript">
+    var feed = new Instafeed({
+      accessToken: 'fkbef4c7t75ltr5cfqe5nn'
+    });
+    feed.run();
+</script>
+  
+  
+  
 </BODY>
 
 </HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<!-- The Token Agent service - make sure to use your own URL here -->
+<script src='https://token-guy-12098.herokuapp.com/token.js'></script>
+
+<!-- The Instafeed.js library (Don't use this URL in production!) -->
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+
+<!-- Configure and run instafeed -->
+<script>
+  console.log(Instafeed)
+  var feed = new Instafeed({
+    accessToken: InstagramToken,
+    transform: function(item) {
+      var d = new Date(item.timestamp);
+      item.date = [d.getDate(), d.getMonth(), d.getYear()].join('/');
+      return item;
+    }
+  });
+  
+  feed.run();
+</script>
+
+<footer>
+  <a href="https://github.com/stevenschobert/instafeed.js">See GitHub for more info and usage instructions</a>
+</footer>
+
